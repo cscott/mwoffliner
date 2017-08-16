@@ -18,3 +18,8 @@ We recommend also to use a DNS cache like nscd.
 One time you have done this, you should be able to start the tool with
 ./mwoffliner.js and see the usage() for more details.
 
+Installing on debian:
+sudo aptitude install redis-server advancecomp gifsicle pngquant jpegoptim
+
+Sample command line:
+node mwoffliner.js --verbose --skipCacheCleaning --adminEmail=kelson@kiwix.org --format= --format=nopic --speed=5 --mwUrl="https://en.wikipedia.org/" --parsoidUrl="https://en.wikipedia.org/api/rest_v1/page/html/" --customZimTitle="Wikipedia 0.8" --customZimDescription="Wikipedia 45.000 best articles with pictures" --customMainPage="Wikipedia:Version_0.8" --customZimFavicon=wp1.png --articleList=selections/wp1-0.8.lst --outputDirectory=zim2index/ --redisSocket=//:6379

@@ -9,10 +9,15 @@
     "email": "kelson@kiwix.org",
     "url": "http://www.kiwix.org"
   },
+  "bin": {
+    "mwoffliner": "./mwoffliner.js",
+    "mwmatrixoffliner": "./mwmatrixoffliner.js"
+  },
   "scripts": {
     "mwoffliner": "node mwoffliner.js",
     "mwmatrixoffliner": "node mwmatrixoffliner.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mocha": "mocha",
+    "test": "npm run mocha"
   },
   "repository": {
     "type": "git",
@@ -40,5 +45,8 @@
     "mediawiki",
     "parsoid",
     "zim"
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
 }
